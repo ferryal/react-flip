@@ -15,14 +15,11 @@ const Button = (props) => {
         letter-spacing: 0;
         font-size: 12px;
         cursor:pointer;
-        padding: 2px 10px;
-
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #fd6542;
+        color: #fd6542;
         `}
-      style={{
-        backgroundColor: text === 'Berhasil' ? '#56b586' : '#fff',
-        border: text === 'Berhasil' ? '1px solid #56b586' : '1px solid #fd6542',
-        color: text === 'Berhasil' ? '#fff' : '#000',
-      }}
       onClick={onClick}
       {...restProps}
     >
