@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { jsx, css } from '@emotion/react';
-import Button from './Button';
+import Badge from './Badge';
 import { getCurrencyString } from '../helper/currency';
 import { fetchDetail } from '../actions/flip';
 
@@ -98,7 +98,7 @@ const Card = (props) => {
                     </div>
                     <div css={css`padding-right: 15px; margin-top: 22px;`}>
                       <div>
-                        <Button text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
+                        <Badge text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
                       </div>
                     </div>
                   </div>
@@ -141,7 +141,7 @@ const Card = (props) => {
                     </div>
                     <div css={css`padding-right: 15px;`}>
                       <div>
-                        <Button text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
+                        <Badge text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
                       </div>
                     </div>
                   </div>
@@ -173,7 +173,7 @@ const Card = (props) => {
                   >
                     <div css={css`padding-left: 15px; margin-top: 22px;`}>
                       <div>
-                        <Button text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
+                        <Badge text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
                       </div>
                     </div>
                     <div css={css`padding-left: 15px;flex-grow:1;`}>
