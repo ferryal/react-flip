@@ -31,4 +31,4 @@ npm run serve
 
 ### Live Demo
 
-(https://react-flip.vercel.app/)[https://react-flip.vercel.app/]
+[https://react-flip.vercel.app/](https://react-flip.vercel.app/)
