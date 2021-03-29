@@ -29,6 +29,8 @@ npm install
 npm run serve
 ```
 
+note: enable cors anywhere / cors extension while running localhost
+
 ### Live Demo
 
 [https://react-flip.vercel.app/](https://react-flip.vercel.app/)
