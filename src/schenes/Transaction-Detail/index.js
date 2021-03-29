@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { jsx, css } from '@emotion/react';
+import { useHistory } from 'react-router-dom';
 import {
   Layout, Navbar, Loading, Card, Button,
 } from '../../components';
@@ -9,6 +10,13 @@ import {
 const TransactionDetail = () => {
   const details = useSelector((state) => state.detailFlip);
   const { detail } = details;
+  const history = useHistory();
+
+  useEffect(() => {
+    if (Object.keys(detail).length === 0) {
+      history.push('/');
+    }
+  }, [Object.keys(detail).length === 0]);
 
   return (
     <Layout>
@@ -20,7 +28,7 @@ const TransactionDetail = () => {
               <Loading />
             </div>
           )}
-          {!(detail.loading) && (
+          {Object.keys(detail).length !== 0 && (
             <>
               <Card
                 rounded="rounded"
@@ -31,7 +39,7 @@ const TransactionDetail = () => {
               />
             </>
           )}
-          <div css={css`margin-top: 10px; color: #fd6542`}>
+          <div css={css`margin-top: 1.5rem;`}>
             <Button text="Kembali" style={{ color: '#fd6542' }} />
           </div>
         </div>
