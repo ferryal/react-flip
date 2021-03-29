@@ -9,7 +9,7 @@ import { fetchDetail } from '../actions/flip';
 
 const Card = (props) => {
   const {
-    rounded, style, className, id, isDetail, children, data,
+    rounded, style, className, id, isDetail, data,
   } = props;
   const dispatch = useDispatch();
   const [month, setmonth] = useState(null);
@@ -90,11 +90,13 @@ const Card = (props) => {
                       {getCurrencyString(data[1].amount)}
                       {' '}
                       •
-                      {day}
-                      {' '}
-                      {month}
-                      {' '}
-                      {year}
+                      <span css={css`padding-left: 5px;`}>
+                        {day}
+                        {' '}
+                        {month}
+                        {' '}
+                        {year}
+                      </span>
                     </div>
                     <div css={css`padding-right: 15px; margin-top: 22px;`}>
                       <div>
@@ -171,10 +173,8 @@ const Card = (props) => {
                     margin-left: -15px;
                   `}
                   >
-                    <div css={css`padding-left: 15px; margin-top: 22px;`}>
-                      <div>
-                        <Badge text={data[1].status === 'SUCCESS' ? 'Berhasil' : 'Pengecekan'} />
-                      </div>
+                    <div css={css`margin-left: 20px; margin-top: 22px; margin-right: 20px;`}>
+                      <i className="fa fa-inbox" aria-hidden="true" css={css`color: #fd6542;font-size: 50px;`} />
                     </div>
                     <div css={css`padding-left: 15px;flex-grow:1;`}>
                       <div css={css`margin-bottom: 15px; margin-top: 15px;`}>

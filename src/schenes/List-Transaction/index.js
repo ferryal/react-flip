@@ -39,7 +39,6 @@ const ListTransaction = ({ isSearchable = true }) => {
         || data[1].sender_bank.includes(search)
         || data[1].beneficiary_bank.includes(search)
         || data[1].beneficiary_name.includes(stringCapitalize));
-      console.log(found);
       setItems(found);
     } else {
       setItems(Object.entries(list));
@@ -75,22 +74,20 @@ const ListTransaction = ({ isSearchable = true }) => {
     </>
   );
 
-  console.log(show);
-
   return (
     <Layout>
       <div>
         <Navbar title="Daftar Transaksi" />
         <div>
-          <h3>Halo kak!</h3>
-          <p>
+          <h3 css={css`margin-bottom: 0px;`}>Halo kak!</h3>
+          <p css={css`margin-top: 0px;`}>
             Kamu telah melakukan transaksi sebesar
-            <strong css={css`color:#fd6542;`}>{getCurrencyString(total)}</strong>
+            <strong css={css`color:#fd6542;padding-left:5px;`}>{getCurrencyString(total)}</strong>
             {' '}
             sejak menggunakan Flip.
           </p>
         </div>
-        <div>
+        <div css={css`margin-bottom: 20px;`}>
           {isSearchable && (
             <SearchBar
               value={search}

@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import { jsx, css } from '@emotion/react';
+import { Link } from 'react-router-dom';
 
 const Button = (props) => {
   const {
@@ -8,7 +9,8 @@ const Button = (props) => {
   } = props;
 
   return (
-    <button
+    <Link
+      to="/"
       css={css`
         font-weight: 500;
         border-radius: 4px;
@@ -19,12 +21,13 @@ const Button = (props) => {
         background-color: #fff;
         border: 1px solid #fd6542;
         color: #fd6542;
+        text-decoration: none;
         `}
       onClick={onClick}
       {...restProps}
     >
       {text}
-    </button>
+    </Link>
   );
 };
 

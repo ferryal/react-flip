@@ -7,8 +7,7 @@ const Loading = () => (
   <div css={{
     textAlign: 'center',
     height: '100vh',
-    width: '100vw',
-    marginTop: '10rem',
+    marginTop: '2rem',
   }}
   >
     <img src={Spinner} alt="Loading..." />

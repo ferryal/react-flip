@@ -6,8 +6,8 @@ import { jsx } from '@emotion/react';
 
 const WrapperItem = styled.div`
   display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 100;
   font-variant: small-caps;
   text-align: center;
 `;
